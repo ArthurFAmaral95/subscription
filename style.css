@@ -1,0 +1,56 @@
+/* #### GENERAL ####*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html, body {
+  font-size: 1.6rem;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+/* #### HEADER ####*/
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/uk_flag.png);
+  background-size: contain;
+}
+
+/* #### MAIN ####*/
+
+main {
+  grid-area: main;
+}
+
+/* #### ASIDE ####*/
+
+aside {
+  grid-area: aside;
+}
+
+/* #### FOOTER ####*/
+
+footer {
+  grid-area: footer;
+}
