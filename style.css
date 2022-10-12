@@ -8,12 +8,18 @@
 
 :root {
   font-size: 62.5%;
+  --gold-color: rgb(255, 189, 21);
+  --bg-color: hsl(39, 100%, 97%);
+  --text-color: yellow;
 }
 
 html, body {
   font-size: 1.6rem;
   height: 100%;
   width: 100%;
+  max-width: 102.4rem;
+  margin-inline: auto;
+  background-color: var(--bg-color);
 }
 
 body {
@@ -22,35 +28,102 @@ body {
     "header header"
     "main aside"
     "footer footer";
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+h1, h2, legend {
+  font-family: 'Dancing Script', cursive;
+}
+
+main, footer, aside, header {
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* #### HEADER ####*/
 
 header {
   grid-area: header;
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-image: url(./images/uk_flag.png);
   background-size: contain;
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--gold-color);
 }
 
 /* #### MAIN ####*/
 
 main {
   grid-area: main;
+  background-image: url(./images/london_bus.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: justify;
+  color: var(--text-color);
 }
 
+main h2 {
+  font-size: 3rem;
+}
+
+main p {
+  margin-block: 1rem;
+}
+
+main p, .field {
+  font-family: 'EB Garamond', serif;
+  font-weight: bold;
+}
+
+main h2 {
+  margin-block: 1rem;
+}
 /* #### ASIDE ####*/
 
 aside {
   grid-area: aside;
 }
 
+fieldset{
+  border: none;
+}
+
+.field {
+  padding-block: 1rem;
+}
+
+legend {
+  font-size: 3.5rem;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  padding: 1rem;
+  font-weight: bold;
+}
+
 /* #### FOOTER ####*/
 
 footer {
   grid-area: footer;
+  background-image: url(./images/uk_flag.png);
+  background-size: contain;
+  color: var(--gold-color);
+}
+
+footer p {
+  padding-block: 1rem;
+}
+
+footer a {
+  color: var(--gold-color);
 }
